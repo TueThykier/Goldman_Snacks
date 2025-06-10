@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #b48a2f; /* gold from logo */
+  --secondary: #fff6e6; /* cream background */
+  --accent: #b48a2f; /* gold accent */
+  --background: #fff6e6; /* cream background */
+  --text: #7a5c1c; /* deep gold-brown for text */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.candy-gradient {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+.candy-text {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.candy-button {
+  @apply px-6 py-3 rounded-full font-bold transition-all duration-300;
+  background: var(--primary);
+  color: white;
+  box-shadow: 0 4px 15px rgba(180, 138, 47, 0.1);
+}
+
+.candy-button:hover {
+  background: var(--accent);
+  color: var(--background);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(180, 138, 47, 0.15);
+}
+
+.candy-card {
+  @apply rounded-2xl p-6;
+  background: white;
+  box-shadow: 0 8px 30px rgba(180, 138, 47, 0.08);
+  border: 1.5px solid var(--primary);
+} 
